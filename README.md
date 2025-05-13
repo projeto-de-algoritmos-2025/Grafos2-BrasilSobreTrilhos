@@ -17,6 +17,12 @@ Este projeto demonstra a aplicação do Algoritmo de Dijkstra em um contexto pr�
 
 O projeto utiliza grafos para representar cidades (nós) e ferrovias (arestas), e implementa o Algoritmo de Dijkstra para calcular o caminho mais curto entre os pontos selecionados.
 
+## Vídeo
+
+[Link para o Vídeo](https://youtu.be/D6Gq-1C0qSg)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D6Gq-1C0qSg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Screenshots
 
 ![Execução no terminal](./img/terminal_example_1.png)

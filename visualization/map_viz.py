@@ -1,9 +1,7 @@
-import osmnx as ox
 import folium
 import folium.plugins
 import matplotlib.pyplot as plt
 from IPython.display import display
-import networkx as nx
 
 class MapVisualizer:
     def __init__(self, city_graph):
