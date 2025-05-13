@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <style>
+        .leaflet-container {
+            background-color: #f2f2f2;
+        }
+        </style>
+        <script>
+        var timeoutID = setTimeout(function() {
+            if (document.querySelector('.leaflet-tile-pane').children.length < 1) {
+                alert('Os tiles do mapa não carregaram. Por favor, verifique sua conexão com a internet.');
+            }
+        }, 5000);
+        </script>
+        
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5d2de20c4fc15b9e1c8ba6df87e3a3e6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5d2de20c4fc15b9e1c8ba6df87e3a3e6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5d2de20c4fc15b9e1c8ba6df87e3a3e6 = L.map(
+                "map_5d2de20c4fc15b9e1c8ba6df87e3a3e6",
+                {
+                    center: [-15.7797, -47.9297],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6ec2f57b6549d1b81dce47f72e867b5d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6ec2f57b6549d1b81dce47f72e867b5d.addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            var poly_line_ee65d8e4999fc9aba2b4be11bae0581d = L.polyline(
+                [[-23.5505, -46.6333], [-22.9068, -43.1729]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_ee65d8e4999fc9aba2b4be11bae0581d.bindTooltip(
+                `<div>
+                     Railroad São Paulo-Rio de Janeiro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_69437f861abc84ee70f040eb7f7b08f3 = L.polyline(
+                [[-23.5505, -46.6333], [-19.9167, -43.9345]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_69437f861abc84ee70f040eb7f7b08f3.bindTooltip(
+                `<div>
+                     Railroad São Paulo-Belo Horizonte
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_461b7a284780a38ad91643fd133ce8ff = L.polyline(
+                [[-23.5505, -46.6333], [-25.429, -49.2671]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_461b7a284780a38ad91643fd133ce8ff.bindTooltip(
+                `<div>
+                     Railroad São Paulo-Curitiba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f3709e7a9b1eb39085e042364c6cac70 = L.polyline(
+                [[-23.5505, -46.6333], [-15.7797, -47.9297]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_f3709e7a9b1eb39085e042364c6cac70.bindTooltip(
+                `<div>
+                     Railroad São Paulo-Brasília
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e0b581b1393e8e63f5cfcfb682829655 = L.polyline(
+                [[-22.9068, -43.1729], [-20.2976, -40.2957]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_e0b581b1393e8e63f5cfcfb682829655.bindTooltip(
+                `<div>
+                     Railroad Rio de Janeiro-Vitória
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_607b6892a70208b1c012c29aa2e83cca = L.polyline(
+                [[-22.9068, -43.1729], [-19.9167, -43.9345]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_607b6892a70208b1c012c29aa2e83cca.bindTooltip(
+                `<div>
+                     Railroad Rio de Janeiro-Belo Horizonte
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8aba67d048b61e4d451adb979d65a596 = L.polyline(
+                [[-19.9167, -43.9345], [-15.7797, -47.9297]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_8aba67d048b61e4d451adb979d65a596.bindTooltip(
+                `<div>
+                     Railroad Belo Horizonte-Brasília
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_65792810bda57fc9afe0599fda6751c5 = L.polyline(
+                [[-19.9167, -43.9345], [-12.9714, -38.5014]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_65792810bda57fc9afe0599fda6751c5.bindTooltip(
+                `<div>
+                     Railroad Belo Horizonte-Salvador
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_21c57165eee583dd7946d7f60b2e42fa = L.polyline(
+                [[-19.9167, -43.9345], [-20.2976, -40.2957]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_21c57165eee583dd7946d7f60b2e42fa.bindTooltip(
+                `<div>
+                     Railroad Belo Horizonte-Vitória
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_22f38693ac6ab4ed2150387765933090 = L.polyline(
+                [[-15.7797, -47.9297], [-16.6869, -49.2648]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_22f38693ac6ab4ed2150387765933090.bindTooltip(
+                `<div>
+                     Railroad Brasília-Goiânia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a84b0815b59e4ca0bbfe793feedb85b5 = L.polyline(
+                [[-15.7797, -47.9297], [-12.9714, -38.5014]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_a84b0815b59e4ca0bbfe793feedb85b5.bindTooltip(
+                `<div>
+                     Railroad Brasília-Salvador
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_29aa1699558019ab4df3c8cd7fae15aa = L.polyline(
+                [[-15.7797, -47.9297], [-15.6014, -56.0979]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_29aa1699558019ab4df3c8cd7fae15aa.bindTooltip(
+                `<div>
+                     Railroad Brasília-Cuiabá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_3f98386fb99600cb85739aaab1680447 = L.polyline(
+                [[-15.7797, -47.9297], [-10.2491, -48.3243]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_3f98386fb99600cb85739aaab1680447.bindTooltip(
+                `<div>
+                     Railroad Brasília-Palmas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_045134dbce37585b11776c6c85156cb2 = L.polyline(
+                [[-12.9714, -38.5014], [-20.2976, -40.2957]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_045134dbce37585b11776c6c85156cb2.bindTooltip(
+                `<div>
+                     Railroad Vitória-Salvador
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f0aedd834b918618b7307e6a355c9cdd = L.polyline(
+                [[-12.9714, -38.5014], [-10.9472, -37.0731]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_f0aedd834b918618b7307e6a355c9cdd.bindTooltip(
+                `<div>
+                     Railroad Salvador-Aracaju
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_cdb193d584b85a1dd5f423b05ca1d526 = L.polyline(
+                [[-12.9714, -38.5014], [-3.7172, -38.5433]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_cdb193d584b85a1dd5f423b05ca1d526.bindTooltip(
+                `<div>
+                     Railroad Salvador-Fortaleza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_38eec27fc3627a785825cb05eadadb24 = L.polyline(
+                [[-12.9714, -38.5014], [-10.2491, -48.3243]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_38eec27fc3627a785825cb05eadadb24.bindTooltip(
+                `<div>
+                     Railroad Salvador-Palmas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e84f7e22c6302d457c3f1c09888ddbb4 = L.polyline(
+                [[-8.0539, -34.8811], [-9.6658, -35.7353]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_e84f7e22c6302d457c3f1c09888ddbb4.bindTooltip(
+                `<div>
+                     Railroad Maceió-Recife
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f4e7305fa723a97afd607dabba3868cf = L.polyline(
+                [[-8.0539, -34.8811], [-7.1195, -34.8794]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_f4e7305fa723a97afd607dabba3868cf.bindTooltip(
+                `<div>
+                     Railroad Recife-João Pessoa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e2ded7e207b7c5426122af949487b696 = L.polyline(
+                [[-3.7172, -38.5433], [-5.7945, -35.2094]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_e2ded7e207b7c5426122af949487b696.bindTooltip(
+                `<div>
+                     Railroad Natal-Fortaleza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5035a7472ab28d09cbcf99a9bd4b7e6c = L.polyline(
+                [[-3.7172, -38.5433], [-5.092, -42.8019]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_5035a7472ab28d09cbcf99a9bd4b7e6c.bindTooltip(
+                `<div>
+                     Railroad Fortaleza-Teresina
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_068f6068afcee76b4fc7515d045d7397 = L.polyline(
+                [[-1.4558, -48.5044], [-2.5391, -44.2829]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_068f6068afcee76b4fc7515d045d7397.bindTooltip(
+                `<div>
+                     Railroad São Luis-Belém
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6a166fd42d4038dd60b59659c866cd02 = L.polyline(
+                [[-1.4558, -48.5044], [0.0356, -51.0705]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_6a166fd42d4038dd60b59659c866cd02.bindTooltip(
+                `<div>
+                     Railroad Belém-Macapá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_c0a8eced6155e9bf661664fe22cab3fb = L.polyline(
+                [[-1.4558, -48.5044], [-10.2491, -48.3243]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_c0a8eced6155e9bf661664fe22cab3fb.bindTooltip(
+                `<div>
+                     Railroad Belém-Palmas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_113f2a7e6aaf6e132656a41b0c623ffb = L.polyline(
+                [[-3.119, -60.0217], [-10.2491, -48.3243]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_113f2a7e6aaf6e132656a41b0c623ffb.bindTooltip(
+                `<div>
+                     Railroad Palmas-Manaus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_164f085a4ac6e447c121661f0bd7fb97 = L.polyline(
+                [[-3.119, -60.0217], [-8.7619, -63.9004]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_164f085a4ac6e447c121661f0bd7fb97.bindTooltip(
+                `<div>
+                     Railroad Porto Velho-Manaus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b0ab3da392ac39e92064f27ccfe5cbeb = L.polyline(
+                [[-3.119, -60.0217], [0.0356, -51.0705]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_b0ab3da392ac39e92064f27ccfe5cbeb.bindTooltip(
+                `<div>
+                     Railroad Manaus-Macapá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4655d35db6be7e079703b3377d67f702 = L.polyline(
+                [[-3.119, -60.0217], [2.8235, -60.6758]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_4655d35db6be7e079703b3377d67f702.bindTooltip(
+                `<div>
+                     Railroad Manaus-Boa Vista
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d4cf5fa3809cc5991d2587494dea007a = L.polyline(
+                [[-30.0368, -51.209], [-27.5969, -48.5495]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_d4cf5fa3809cc5991d2587494dea007a.bindTooltip(
+                `<div>
+                     Railroad Florianópolis-Porto Alegre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2377c6c9c720e9af93281a463b0f67e3 = L.polyline(
+                [[-25.429, -49.2671], [-20.4697, -54.6201]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_2377c6c9c720e9af93281a463b0f67e3.bindTooltip(
+                `<div>
+                     Railroad Campo Grande-Curitiba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_dbe5002f1c7fc2a702b0dc129205a2f6 = L.polyline(
+                [[-25.429, -49.2671], [-27.5969, -48.5495]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_dbe5002f1c7fc2a702b0dc129205a2f6.bindTooltip(
+                `<div>
+                     Railroad Curitiba-Florianópolis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_cb87f0a61fc40f81ec571ef091aa56e3 = L.polyline(
+                [[-20.4697, -54.6201], [-16.6869, -49.2648]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_cb87f0a61fc40f81ec571ef091aa56e3.bindTooltip(
+                `<div>
+                     Railroad Goiânia-Campo Grande
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5afe34a16d558d2ba73db9b9695a2585 = L.polyline(
+                [[-20.4697, -54.6201], [-15.6014, -56.0979]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_5afe34a16d558d2ba73db9b9695a2585.bindTooltip(
+                `<div>
+                     Railroad Cuiabá-Campo Grande
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_55c63dc3211a08b7dbc5c1c7c3acaa2b = L.polyline(
+                [[-15.6014, -56.0979], [-10.2491, -48.3243]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_55c63dc3211a08b7dbc5c1c7c3acaa2b.bindTooltip(
+                `<div>
+                     Railroad Palmas-Cuiabá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_abc23d7e38dd7fd9db3f3290c194a37a = L.polyline(
+                [[-15.6014, -56.0979], [-8.7619, -63.9004]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_abc23d7e38dd7fd9db3f3290c194a37a.bindTooltip(
+                `<div>
+                     Railroad Cuiabá-Porto Velho
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e198fa1549a38b136137bb92b4e5464a = L.polyline(
+                [[-8.7619, -63.9004], [-9.9754, -67.8249]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_e198fa1549a38b136137bb92b4e5464a.bindTooltip(
+                `<div>
+                     Railroad Porto Velho-Rio Branco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_430fbbd31d88dec4f6a374f3407680c6 = L.polyline(
+                [[-5.092, -42.8019], [-2.5391, -44.2829]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_430fbbd31d88dec4f6a374f3407680c6.bindTooltip(
+                `<div>
+                     Railroad Teresina-São Luis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_0ffb4c827460cb20399541206773bd6f = L.polyline(
+                [[-5.092, -42.8019], [-10.2491, -48.3243]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_0ffb4c827460cb20399541206773bd6f.bindTooltip(
+                `<div>
+                     Railroad Teresina-Palmas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_783131d7cb4aca927e20c2504c083fcf = L.polyline(
+                [[-5.7945, -35.2094], [-7.1195, -34.8794]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_783131d7cb4aca927e20c2504c083fcf.bindTooltip(
+                `<div>
+                     Railroad João Pessoa-Natal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_32aa0de7fac23ca23bb182302a8f753c = L.polyline(
+                [[-9.6658, -35.7353], [-10.9472, -37.0731]],
+                {"bubblingMouseEvents": true, "color": "#FFD700", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FFD700", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_32aa0de7fac23ca23bb182302a8f753c.bindTooltip(
+                `<div>
+                     Railroad Aracaju-Maceió
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b65a36ad849bfa5082b51ad554c12cef = L.circleMarker(
+                [-23.5505, -46.6333],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_b65a36ad849bfa5082b51ad554c12cef.bindTooltip(
+                `<div>
+                     São Paulo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7baf189063065f3a04af7cda145e10aa = L.circleMarker(
+                [-22.9068, -43.1729],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_7baf189063065f3a04af7cda145e10aa.bindTooltip(
+                `<div>
+                     Rio de Janeiro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b19c900690b1f209ec57cc12e86b318c = L.circleMarker(
+                [-19.9167, -43.9345],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_b19c900690b1f209ec57cc12e86b318c.bindTooltip(
+                `<div>
+                     Belo Horizonte
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d5e5aaa80c6ab74a1299104b84c4674e = L.circleMarker(
+                [-15.7797, -47.9297],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_d5e5aaa80c6ab74a1299104b84c4674e.bindTooltip(
+                `<div>
+                     Brasília
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d10455e7b5b8cc5f401f15fd1bb80c23 = L.circleMarker(
+                [-12.9714, -38.5014],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_d10455e7b5b8cc5f401f15fd1bb80c23.bindTooltip(
+                `<div>
+                     Salvador
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_09a0529db913384c7484702d7c0e7695 = L.circleMarker(
+                [-8.0539, -34.8811],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_09a0529db913384c7484702d7c0e7695.bindTooltip(
+                `<div>
+                     Recife
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fc65a9ecf861a810d1ca670c2281de09 = L.circleMarker(
+                [-3.7172, -38.5433],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_fc65a9ecf861a810d1ca670c2281de09.bindTooltip(
+                `<div>
+                     Fortaleza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ff869163d624fc739c397c2e9dc8306 = L.circleMarker(
+                [-1.4558, -48.5044],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_8ff869163d624fc739c397c2e9dc8306.bindTooltip(
+                `<div>
+                     Belém
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b52cc0719f1799676c69ad88a6e756c7 = L.circleMarker(
+                [-3.119, -60.0217],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_b52cc0719f1799676c69ad88a6e756c7.bindTooltip(
+                `<div>
+                     Manaus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_25714d1af562abd30869500b38aa8f8b = L.circleMarker(
+                [-30.0368, -51.209],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_25714d1af562abd30869500b38aa8f8b.bindTooltip(
+                `<div>
+                     Porto Alegre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37b15201bf39f4315154c8e8e23dab5f = L.circleMarker(
+                [-25.429, -49.2671],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_37b15201bf39f4315154c8e8e23dab5f.bindTooltip(
+                `<div>
+                     Curitiba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2db17784cc0d33e39c0e45664fb454e4 = L.circleMarker(
+                [-20.4697, -54.6201],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_2db17784cc0d33e39c0e45664fb454e4.bindTooltip(
+                `<div>
+                     Campo Grande
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_afc6ecaa2e131bf86eb2361b4d284d27 = L.circleMarker(
+                [-15.6014, -56.0979],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_afc6ecaa2e131bf86eb2361b4d284d27.bindTooltip(
+                `<div>
+                     Cuiabá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb0ffcc7050070efcb895083f132e837 = L.circleMarker(
+                [-8.7619, -63.9004],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_bb0ffcc7050070efcb895083f132e837.bindTooltip(
+                `<div>
+                     Porto Velho
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2dde5ea7621306fea011d577a1afbb60 = L.circleMarker(
+                [-16.6869, -49.2648],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_2dde5ea7621306fea011d577a1afbb60.bindTooltip(
+                `<div>
+                     Goiânia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0f3079a6f8d2180d34acbe31ccf6e4a4 = L.circleMarker(
+                [-5.092, -42.8019],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_0f3079a6f8d2180d34acbe31ccf6e4a4.bindTooltip(
+                `<div>
+                     Teresina
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2addb10018b1b4694793c5c5cfec08e4 = L.circleMarker(
+                [-5.7945, -35.2094],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_2addb10018b1b4694793c5c5cfec08e4.bindTooltip(
+                `<div>
+                     Natal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_177c51992d4c6a875e7a5cd64fa50ad0 = L.circleMarker(
+                [-7.1195, -34.8794],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_177c51992d4c6a875e7a5cd64fa50ad0.bindTooltip(
+                `<div>
+                     João Pessoa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2a6f649196cba497626eec8c14078c85 = L.circleMarker(
+                [-9.6658, -35.7353],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_2a6f649196cba497626eec8c14078c85.bindTooltip(
+                `<div>
+                     Maceió
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c066e17a5ad423d6c086bab85b6fbea7 = L.circleMarker(
+                [-10.9472, -37.0731],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_c066e17a5ad423d6c086bab85b6fbea7.bindTooltip(
+                `<div>
+                     Aracaju
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a1740a70761091d23d885a7190c9c1ff = L.circleMarker(
+                [-20.2976, -40.2957],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_a1740a70761091d23d885a7190c9c1ff.bindTooltip(
+                `<div>
+                     Vitória
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_59a5e98b5d7046e436db9a62c3ae81c0 = L.circleMarker(
+                [-27.5969, -48.5495],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_59a5e98b5d7046e436db9a62c3ae81c0.bindTooltip(
+                `<div>
+                     Florianópolis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8f81f56612923c708c2d837c9ba78015 = L.circleMarker(
+                [-9.9754, -67.8249],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_8f81f56612923c708c2d837c9ba78015.bindTooltip(
+                `<div>
+                     Rio Branco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf045c1ff27e18bf8ae54423e6b2a8e1 = L.circleMarker(
+                [2.8235, -60.6758],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_bf045c1ff27e18bf8ae54423e6b2a8e1.bindTooltip(
+                `<div>
+                     Boa Vista
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a1d75913a2e7479568cd0d79bea48f8 = L.circleMarker(
+                [-2.5391, -44.2829],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_7a1d75913a2e7479568cd0d79bea48f8.bindTooltip(
+                `<div>
+                     São Luis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_978c2c90288ad322ce6fdda4803aecba = L.circleMarker(
+                [-10.2491, -48.3243],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_978c2c90288ad322ce6fdda4803aecba.bindTooltip(
+                `<div>
+                     Palmas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ebeed5cac48e7cecddbe5170a2b22295 = L.circleMarker(
+                [0.0356, -51.0705],
+                {"bubblingMouseEvents": true, "color": "#B22222", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#B22222", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_ebeed5cac48e7cecddbe5170a2b22295.bindTooltip(
+                `<div>
+                     Macapá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d9679197fa67179ed1b873ffa93fc044 = L.polyline(
+                [[-3.119, -60.0217], [-8.7619, -63.9004], [-15.6014, -56.0979], [-20.4697, -54.6201], [-25.429, -49.2671]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            poly_line_d9679197fa67179ed1b873ffa93fc044.bindTooltip(
+                `<div>
+                     Rota de Trem
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_22842cb37846ea321943b1eb3c8d9e53 = L.marker(
+                [-3.119, -60.0217],
+                {
+}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            var icon_53a7058656935d0a441013bdc969dd18 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d8036cb46e91ea0f374bbec2c6022e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e1eb2c71743daceb4c83227e4221695 = $(`<div id="html_6e1eb2c71743daceb4c83227e4221695" style="width: 100.0%; height: 100.0%;">Início: Manaus</div>`)[0];
+                popup_2d8036cb46e91ea0f374bbec2c6022e8.setContent(html_6e1eb2c71743daceb4c83227e4221695);
+            
+        
+
+        marker_22842cb37846ea321943b1eb3c8d9e53.bindPopup(popup_2d8036cb46e91ea0f374bbec2c6022e8)
+        ;
+
+        
+    
+    
+                marker_22842cb37846ea321943b1eb3c8d9e53.setIcon(icon_53a7058656935d0a441013bdc969dd18);
+            
+    
+            var marker_52e67b3e3d52b265291d3b36e2cb456d = L.marker(
+                [-25.429, -49.2671],
+                {
+}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            var icon_8e86db7cf36d20f3c7fa1dd22f52959e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3556b67fa1ecdcf43188d8a3f972cc85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e3b1cc7f51cc71de81de0e796f4dbda = $(`<div id="html_9e3b1cc7f51cc71de81de0e796f4dbda" style="width: 100.0%; height: 100.0%;">End: Curitiba</div>`)[0];
+                popup_3556b67fa1ecdcf43188d8a3f972cc85.setContent(html_9e3b1cc7f51cc71de81de0e796f4dbda);
+            
+        
+
+        marker_52e67b3e3d52b265291d3b36e2cb456d.bindPopup(popup_3556b67fa1ecdcf43188d8a3f972cc85)
+        ;
+
+        
+    
+    
+                marker_52e67b3e3d52b265291d3b36e2cb456d.setIcon(icon_8e86db7cf36d20f3c7fa1dd22f52959e);
+            
+    
+            var circle_marker_e5195571ce8fb11381886b3f26cd31bd = L.circleMarker(
+                [-8.7619, -63.9004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_e5195571ce8fb11381886b3f26cd31bd.bindTooltip(
+                `<div>
+                     Stop: Porto Velho
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_327008e5fa7b933907a09790f20616ad = L.circleMarker(
+                [-15.6014, -56.0979],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_327008e5fa7b933907a09790f20616ad.bindTooltip(
+                `<div>
+                     Stop: Cuiabá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e1c504d4df06c241987a9e47f749ad8 = L.circleMarker(
+                [-20.4697, -54.6201],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+            circle_marker_0e1c504d4df06c241987a9e47f749ad8.bindTooltip(
+                `<div>
+                     Stop: Campo Grande
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ed1dff142557b0e39d9902fddcf37497 = L.marker(
+                [-3.119, -60.0217],
+                {
+}
+            ).addTo(map_5d2de20c4fc15b9e1c8ba6df87e3a3e6);
+        
+    
+        var popup_1f1bddef427da9de7665cc53a9808d48 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d4b93ba69d42030bc1a9f6c9d1b6fbb9 = $(`<div id="html_d4b93ba69d42030bc1a9f6c9d1b6fbb9" style="width: 100.0%; height: 100.0%;">                 <h3>Resumo da Rota Ferroviária</h3>                 <ul>                     <li><b>De:</b> Manaus</li>                     <li><b>Para:</b> Curitiba</li>                     <li><b>Distância Total:</b> 3236.00 km</li>                     <li><b>Tempo Estimado:</b> 40.45 horas</li>                     <li><b>Paradas:</b> Porto Velho, Cuiabá, Campo Grande</li>                 </ul>             </div>`)[0];
+                popup_1f1bddef427da9de7665cc53a9808d48.setContent(html_d4b93ba69d42030bc1a9f6c9d1b6fbb9);
+            
+        
+
+        marker_ed1dff142557b0e39d9902fddcf37497.bindPopup(popup_1f1bddef427da9de7665cc53a9808d48)
+        ;
+
+        
+    
+</script>
+</html>
